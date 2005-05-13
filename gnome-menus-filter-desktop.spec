@@ -11,23 +11,22 @@ Source2:	%{name}-settings.menu
 URL:		http://www.gnome.org/
 Provides:	gnome-menus-filter
 Conflicts:	gnome-menus-filter-default
-
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Clean gnome-menus for an average desktop user. Removes rarely used applications.
+Clean gnome-menus for an average desktop user. Removes rarely used
+applications.
 
 %description -l pl
-Wyczyszczone gnome-menus dla zwyk쿮go u퓓tkownika. Usuwa rzadko u퓓wane aplikacje.
+Wyczyszczone gnome-menus dla zwyk쿮go u퓓tkownika. Usuwa rzadko
+u퓓wane aplikacje.
 
 %prep
 
-%build
-
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT%{_sysconfdir}/xdg/menus
+
 install %{SOURCE0} $RPM_BUILD_ROOT%{_sysconfdir}/xdg/menus/applications.menu
 install %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/xdg/menus/preferences.menu
 install %{SOURCE2} $RPM_BUILD_ROOT%{_sysconfdir}/xdg/menus/settings.menu
