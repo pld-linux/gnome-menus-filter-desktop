@@ -1,0 +1,193 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+ "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
+
+<Menu>
+
+  <Name>Applications</Name>
+  <Directory>Applications.directory</Directory>
+
+  <!-- Scan legacy dirs first, as later items take priority -->
+  <KDELegacyDirs/>
+  <LegacyDir>/etc/X11/applnk</LegacyDir>
+  <LegacyDir>/usr/share/gnome/apps</LegacyDir>
+
+  <!-- Read standard .directory and .desktop file locations -->
+  <DefaultAppDirs/>
+  <DefaultDirectoryDirs/>
+
+  <!-- Read in overrides and child menus from applications-merged/ -->
+  <DefaultMergeDirs/>
+
+  <!-- Accessories submenu -->
+  <Menu>
+    <Name>Accessories</Name>
+    <Directory>Accessories.directory</Directory>
+    <Include>
+      <And>
+        <Or>
+          <Category>Utility</Category>
+          <And>
+	    <Category>TerminalEmulator</Category>
+	    <Or>
+	      <Category>GNOME</Category>
+	      <Category>KDE</Category>
+	    </Or>
+	  </And>
+          <Category>TextEditor</Category>
+        </Or>
+        <Not>
+          <Category>System</Category>
+        </Not>
+      </And>
+    </Include>
+    <Exclude>
+      <Category>ConsoleOnly</Category>
+    </Exclude>
+  </Menu> <!-- End Accessories -->
+
+  <!-- Accessibility submenu -->
+  <Menu>
+    <Name>Accessibility</Name>
+    <Directory>Accessibility.directory</Directory>
+    <Include>
+      <And>
+        <Category>Accessibility</Category>
+        <Not>
+          <Category>Settings</Category>
+        </Not>
+      </And>
+    </Include>
+  </Menu> <!-- End Accessibility -->
+
+  <!-- Development Tools -->
+  <Menu>
+    <Name>Development</Name>
+    <Directory>Development.directory</Directory>
+    <Include>
+      <And>
+        <Category>Development</Category>
+      </And>
+    </Include>
+  </Menu> <!-- End Development Tools -->
+
+  <!-- Edutainment -->
+  <Menu>
+    <Name>Edutainment</Name>
+    <Directory>Edutainment.directory</Directory>
+    <Include>
+      <And>
+        <Category>Education</Category>
+      </And>
+    </Include>
+    <Exclude>
+      <Category>ConsoleOnly</Category>
+    </Exclude>
+  </Menu> <!-- End Edutainment -->
+
+  <!-- Games -->
+  <Menu>
+    <Name>Games</Name>
+    <Directory>Games.directory</Directory>
+    <Include>
+      <And>
+        <Category>Game</Category>
+      </And>
+    </Include>
+  </Menu> <!-- End Games -->
+
+  <!-- Graphics -->
+  <Menu>
+    <Name>Graphics</Name>
+    <Directory>Graphics.directory</Directory>
+    <Include>
+      <And>
+        <Category>Graphics</Category>
+      </And>
+    </Include>
+  </Menu> <!-- End Graphics -->
+
+  <!-- Internet -->
+  <Menu>
+    <Name>Internet</Name>
+    <Directory>Internet.directory</Directory>
+    <Include>
+      <And>
+        <Category>Network</Category>
+      </And>
+    </Include>
+    <Exclude>
+      <Category>ConsoleOnly</Category>
+    </Exclude>
+  </Menu>   <!-- End Internet -->
+
+  <!-- Multimedia -->
+  <Menu>
+    <Name>Multimedia</Name>
+    <Directory>Multimedia.directory</Directory>
+    <Include>
+      <And>
+        <Or>
+          <Category>AudioVideo</Category>
+          <Category>Audio</Category>
+          <Category>Video</Category>
+        </Or>
+      </And>
+    </Include>
+  </Menu>   <!-- End Multimedia -->
+
+  <!-- Office -->
+  <Menu>
+    <Name>Office</Name>
+    <Directory>Office.directory</Directory>
+    <Include>
+      <And>
+        <Category>Office</Category>
+        <Not>
+          <Category>TextEditor</Category>
+        </Not>
+      </And>
+    </Include>
+  </Menu> <!-- End Office -->
+
+  <!-- System Tools-->
+  <Menu>
+    <Name>System</Name>
+    <Directory>System-Tools.directory</Directory>
+    <Include>
+      <And>
+        <Category>System</Category>
+        <Not><Category>Settings</Category></Not>
+      </And>
+    </Include>
+    <Exclude>
+      <Category>ConsoleOnly</Category>
+    </Exclude>
+  </Menu>   <!-- End System Tools -->
+
+  <!-- Other -->
+  <Menu>
+    <Name>Other</Name>
+    <Directory>Other.directory</Directory>
+    <OnlyUnallocated/>
+    <Include>
+      <And>
+        <Or>
+          <Category>Application</Category>
+          <Category>Amusement</Category>
+          <Category>Applet</Category>
+          <Category>X-Help</Category>
+        </Or>
+        <Not><Category>Core</Category></Not>
+        <Not><Category>Settings</Category></Not>
+      </And>
+    </Include>
+    <Exclude>
+      <Filename>yelp.desktop</Filename>
+    </Exclude>
+    <Exclude>
+      <Category>ConsoleOnly</Category>
+    </Exclude>
+
+  </Menu> <!-- End Other -->
+
+</Menu> <!-- End Applications -->
