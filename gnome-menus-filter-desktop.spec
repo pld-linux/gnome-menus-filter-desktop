@@ -2,15 +2,16 @@ Summary:	Clean gnome-menus for an average user
 Summary(pl):	gnome-menus dla zwyk³ego u¿ytkownika
 Name:		gnome-menus-filter-desktop
 Version:	2.10.1
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	%{name}-applications.menu
 Source1:	%{name}-preferences.menu
 Source2:	%{name}-settings.menu
 URL:		http://www.gnome.org/
+Requires:	gnome-menus
 Provides:	gnome-menus-filter
-Conflicts:	gnome-menus-filter-default
+Obsoletes:	gnome-menus-filter-default
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
