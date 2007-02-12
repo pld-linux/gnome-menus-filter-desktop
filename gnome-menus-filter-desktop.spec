@@ -1,5 +1,5 @@
 Summary:	Clean gnome-menus for an average user
-Summary(pl):	gnome-menus dla zwyk≥ego uøytkownika
+Summary(pl.UTF-8):   gnome-menus dla zwyk≈Çego u≈ºytkownika
 Name:		gnome-menus-filter-desktop
 Version:	2.10.1
 Release:	2
@@ -18,9 +18,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Clean gnome-menus for an average desktop user. Removes rarely used
 applications.
 
-%description -l pl
-Wyczyszczone gnome-menus dla zwyk≥ego uøytkownika. Usuwa rzadko
-uøywane aplikacje.
+%description -l pl.UTF-8
+Wyczyszczone gnome-menus dla zwyk≈Çego u≈ºytkownika. Usuwa rzadko
+u≈ºywane aplikacje.
 
 %prep
 
