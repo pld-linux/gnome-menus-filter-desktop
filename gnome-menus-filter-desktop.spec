@@ -1,5 +1,5 @@
 Summary:	Clean gnome-menus for an average user
-Summary(pl.UTF-8):   gnome-menus dla zwykłego użytkownika
+Summary(pl.UTF-8):	gnome-menus dla zwykłego użytkownika
 Name:		gnome-menus-filter-desktop
 Version:	2.10.1
 Release:	2
